@@ -82,7 +82,7 @@ namespace CarDetails
                 {
                     if (car.Id == Convert.ToInt32(textBox1.Text))
                     {
-                        db.Car_Details.ToList().RemoveAt(index);
+                        db.Car_Details.Remove(car);
                         db.SaveChanges();
                         MessageBox.Show("Customer Deleted: " + car.Id);
                         break;
